@@ -2,14 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Uppgift 2
-        System.out.println("Skriv ett tal: ");
-        Scanner tal = new Scanner(System.in);
+        //Uppgift 3
+        boolean sant = true;
 
-        int x = tal.nextInt();
-        for(int i = 0; i < x; i++){
-            System.out.println("Loopet kommer köras " + x + " gånger");
-        }
+        do {
+            System.out.println("Write a word: ");
+            Scanner word = new Scanner(System.in);
+
+            System.out.println("You have chosen the word - " + word.nextLine());
+
+
+
+        }while(sant);
+
 
 
 
