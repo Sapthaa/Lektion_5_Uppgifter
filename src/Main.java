@@ -3,29 +3,42 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Uppgift 4
 
-        // Skapar en scanner för inputen
-        Scanner scanner = new Scanner(System.in);
-        // Skapar en boolean variabel för do-while loopet
+        //Uppgift 5
+        // Skapar en scanner för input
+        Scanner input = new Scanner(System.in);
+        //Skapar en boolean variabel för do while loopet
         boolean isPlaying = true;
 
-        // Skapar en do while loop
         do {
             // Skriver ut texten
-            System.out.println("Write the word \"stop\" to stop the loop");
-            // Skapar en variabel för det som skrivs in i inputen
-            String stop = scanner.nextLine();
+            System.out.println("Write \"STOP!\" to end or 1 to throw: ");
+            // Skapar en string variabel för inputen
+            String val = input.nextLine();
 
-            // Skapar en String variabel med ordet "stop"
-            String x = "stop";
+            // Skapar en switch med inputens värde
+            switch (val){
+                case "1":
+                    // Om inputen innehåller siffran "1" så skrivs texten ut
+                    System.out.println("Throwing!");
+                    // avbryter caset
+                    break;
 
-            // Om inputen innehåller ordet "stop" så stoppas loopet
-            if(stop.equals("stop")){
-                break;
+                case "STOP!":
+                    /* Om inputen innehåller ordet "STOP!" så blir boolean variabeln isPlaying false,
+                    vilket gör att loopet kommer att avslutas helt
+                     */
+                    isPlaying = false;
+                    break;
+
+                default:
+                    // Om inputen inte innehåller någon av dessa, kommer texten skrivas ut
+                    System.out.println("Wrong input");
+
             }
 
         }while(isPlaying);
+
 
     }
 }
